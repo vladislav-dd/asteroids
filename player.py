@@ -4,10 +4,8 @@ from circleshape import CircleShape
 
 class Player(CircleShape):
     def __init__(self, x, y):
-        self.x = x
-        self.y = y
-        super.__init__(PLAYER_RADIUS)
-        rotation = 0
+        super.__init__(x, y, PLAYER_RADIUS)
+        self.rotation = 0
     
     def draw(self, screen):
         pygame.draw.polygon(screen,"white", self.triangle(), width=2)
